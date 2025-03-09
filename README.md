@@ -1,1 +1,2 @@
-# amigo-secreto
+# Amigo secreto
+### Author: Jackeline Goncalves
