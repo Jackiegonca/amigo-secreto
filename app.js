@@ -8,5 +8,5 @@ function agregarAmigo(){
 
 
 function sortearAmigo(){
-    
+    console.log("Hola mundo")
 }
