@@ -9,6 +9,20 @@ inputAmigo.addEventListener("keypress", function(event) {
     }
 });
 
+let misAmigos = []
+
+function actualizarListaAmigos(){
+
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+
+    for(var i = 0; i < misAmigos.length; i++){
+
+        let li = document.createElement("li");
+        li.textContent = misAmigos[i];
+        lista.appendChild(li);
+    }
+}
 
 function agregarAmigo(){
 
@@ -29,13 +43,10 @@ function agregarAmigo(){
         return;
     }
 
-    let lista = document.getElementById("listaAmigos");
-    let li = document.createElement("li");
-    li.textContent = friendValue;
-    lista.appendChild(li);
+    misAmigos.push(friendValue)
     friend.value = "";
+    actualizarListaAmigos()
 }
-
 
 function sortearAmigo(){
     
